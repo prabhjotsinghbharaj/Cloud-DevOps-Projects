@@ -10,6 +10,7 @@ This needs to be done in an automated fashion so that the infrastructure can be 
 ## Overview
 
 - Create networking resources using cloud formation template.
+- Create servers for Udagram App which pulls source code from S3 bucket automatically while starting.
 ```
 
 -   Following resources are created after creating network stack:
@@ -20,7 +21,6 @@ This needs to be done in an automated fashion so that the infrastructure can be 
     -   Internet Gateway
     -   NAT Gateways
 ```
-- Create servers for Udagram App which pulls source code from S3 bucket automatically while starting.
 
 ```
 -   Following resources are created after creating server stack:
@@ -37,5 +37,6 @@ This needs to be done in an automated fashion so that the infrastructure can be 
 
 Run following commands :-
 
-1. ./create.sh net network.yml network-params.json
-2. ./create.sh app servers.yml servers-params.json
+1. Create a S3 bucket and upload index.html
+2. ./create.sh net network.yml network-params.json
+3. ./create.sh app servers.yml servers-params.json
