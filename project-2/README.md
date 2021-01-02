@@ -1,5 +1,4 @@
 # Deploy a high-availability web app using CloudFormation
-This is one of the project in Udacity Cloud DevOps Engineer Nanodegree.
 
 ## Project Overview
 Assume that one company is creating Instagram like application. Developers have developed the code and pushed the code into the S3 bucket on AWS. Now the task is to create the infrastructure for deploying that application in an automated way using CloudFormation following the best practices and once infrastructure is ready, deploy that application code onto that HA infrastructure.
@@ -18,9 +17,7 @@ Assume that one company is creating Instagram like application. Developers have 
 
 - Create networking resources using cloud formation template.
 ```
-$ scripts/create.sh udagram-network-stack network.yml network-params.json
-```
--   Following resources are created after executing above command:
+-   Following resources are created after creating network stack:
     -   VPC
     -   Subnets
     -   Route Tables
@@ -29,13 +26,11 @@ $ scripts/create.sh udagram-network-stack network.yml network-params.json
     -   NAT Gateways
 - Create servers for Udagram App which pulls source code from S3 bucket automatically while starting.
 ```
-$ scripts/create.sh udagram-servers-stack servers.yml servers-params.json
-```
--   Following resources are created after executing above command:
+-   Following resources are created after creating server stack:
     -   Security Groups
     -   IAM Role, Policy, Instance Profile
     -   Launch configuration
     -   Auto Scaling Group
     -   Load Balancer
     -   Target Group
-- Once the above steps are complete, you can find the URL of application in the outputs section of `udagram-servers-stack` CloudFormarion stack.
+- Once the above steps are complete, you can find the URL of application in the outputs section of server stack.
