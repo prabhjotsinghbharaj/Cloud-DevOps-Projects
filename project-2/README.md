@@ -7,7 +7,7 @@ You have been tasked with deploying the application, along with the necessary su
 
 This needs to be done in an automated fashion so that the infrastructure can be discarded as soon as the testing team finishes their tests and gathers their results.
 
-## Project Setup
+## Overview
 
 - Create networking resources using cloud formation template.
 ```
@@ -32,3 +32,10 @@ This needs to be done in an automated fashion so that the infrastructure can be 
     -   Target Group
 ```
 - Once the above steps are complete, you can find the URL of application in the outputs section of server stack.
+
+## Project Setup
+
+Run following commands :-
+
+1. ./create.sh net network.yml network-params.json
+2. ./create.sh app servers.yml servers-params.json
